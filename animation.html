@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box{
+            background: lightgreen;
+            width: 900px;
+            height: 300px;
+            border: 2px solid red;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+           animation: slide 2s ease-in-out .2s infinite alternate;
+           animation-play-state: running;
+        }
+       @keyframes slide{
+           from{
+               background-color:white ;
+              left: 0;
+              top: 0;
+           }
+           25%{
+            top: 250px;
+           }
+
+          50%{
+            top: 0px;
+           }
+           75%{
+            top: 250px;
+           }
+           to{
+           top: 0px;
+            left: 850px;
+           }
+       }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+    
+</body>
+</html>
